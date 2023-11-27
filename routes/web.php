@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('profile');
 });
+
+Route::get('/user/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/premium/subscription', function () {
+    return view('subscription');
+})->name('subscription');
+
+Route::get('/navigate', function () {
+    // Logic to determine where to navigate
+    // For simplicity, assuming a random navigation
+    return rand(0, 1) ? redirect()->route('profile') : redirect()->route('subscription');
+})->name('navigate');
