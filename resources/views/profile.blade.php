@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
-<body class="container-fluid mx-0 px-xl-0 bg-gray-100">
-<div class="row px-2 mt-3 px-xl-5 mt-xl-5 mx-xl-5 justify-content-center">
+<body class="container-fluid mx-0 px-xl-0 px-0 bg-gray-100">
+<div class="row px-0 mt-3 mx-2 px-xl-5 mt-xl-5 mx-xl-5 justify-content-center">
     <div class="col-md-3">
         <div class="card p-3">
             <div class="user-heading round">
@@ -12,7 +12,7 @@
             <a href="#" class="btn btn-outline-primary"> <i class="bi bi-pencil-square"></i> Edit profile</a>
         </div>
     </div>
-    <div class="col-md-5 mt-3 mt-xl-0">
+    <div class="col-md-5 mt-3 mt-xl-0 mb-5">
         <div class="row">
             <div class="card p-3">
                 <div class="panel-body bio-graph-info">
@@ -21,7 +21,7 @@
                         <h1>Akara Free</h1>
                     </div>
                     <div class="row px-3 px-xl-5 mt-5">
-                        <a href="#" class="btn btn-outline-dark rounded-5"><i class="bi bi-gem" style="color: #6f42c1"></i> Join <span style="color: #6f42c1" class="fw-bold">Premium</span></a>
+                        <a href="#" class="btn rounded-5 fw-bold" style="--bs-btn-border-color: #6f42c1; --bs-btn-hover-bg: #6f42c1; --bs-btn-hover-color: #ffffff; --bs-btn-color: #6f42c1"><i class="bi bi-gem"></i> Join <span class="fw-bolder">Premium</span></a>
                     </div>
                 </div>
             </div>
