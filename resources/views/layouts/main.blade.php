@@ -4,7 +4,9 @@
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>My Contact</title>
+    <title>Akara Podcast</title>
+    <link rel="icon" type="image/png"
+          href="{{asset('akara_logo.jpg')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
     <!-- Style -->
     <link href="{{asset('assets/bootstrap-icons/font/bootstrap-icons.css')}}" rel="stylesheet">
@@ -16,7 +18,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
         <a class="navbar-brand text-uppercase" href="#" style="color: #6f42c1">
-            <strong><img src="{{asset('akara_logo.jpg')}}" style="width: 32px"/> Akara</strong> Podcast
+            <strong><img class="rounded-2" src="{{asset('akara_logo.jpg')}}" style="width: 32px"/> Akara</strong> Podcast
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,10 +26,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('profile')}}">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Premium</a>
+                    <a class="nav-link active" href="{{route('subscription')}}">Premium</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
