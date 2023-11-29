@@ -30,13 +30,13 @@
         <div class="row mt-4">
             <div class="card p-3">
                 <p style="color: #6f42c1">Account</p>
-                <div class="d-flex justify-content-between btn align-items-center" href="{{route('subscription')}}" style="--bs-btn-hover-border-color: #000000">
+                <a class="d-flex justify-content-between btn align-items-center" href="{{route('subscription')}}" style="--bs-btn-hover-border-color: #000000">
                     <div>
                         <i class="bi bi-gem" style="color: #6f42c1"></i> Manage your plan
                     </div>
 
                     <div><i class="bi bi-caret-right fs-4" style="color: #6f42c1"></i></div>
-                </div>
+                </a>
                 <div class="d-flex justify-content-between btn align-items-center" style="--bs-btn-hover-border-color: #000000">
                     <div>
                         <i class="bi bi-credit-card" style="color: #6f42c1"></i> Manage your card
