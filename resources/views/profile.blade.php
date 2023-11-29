@@ -21,7 +21,7 @@
                         <h1>Akara Free</h1>
                     </div>
                     <div class="row px-3 px-xl-5 mt-5">
-                        <a href="#" class="btn rounded-5 fw-bold" style="--bs-btn-border-color: #6f42c1; --bs-btn-hover-bg: #6f42c1; --bs-btn-hover-color: #ffffff; --bs-btn-color: #6f42c1"><i class="bi bi-gem"></i> Join <span class="fw-bolder">Premium</span></a>
+                        <a href="{{route('subscription')}}" class="btn rounded-5 fw-bold" style="--bs-btn-border-color: #6f42c1; --bs-btn-hover-bg: #6f42c1; --bs-btn-hover-color: #ffffff; --bs-btn-color: #6f42c1"><i class="bi bi-gem"></i> Join <span class="fw-bolder">Premium</span></a>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
         <div class="row mt-4">
             <div class="card p-3">
                 <p style="color: #6f42c1">Account</p>
-                <div class="d-flex justify-content-between btn align-items-center" style="--bs-btn-hover-border-color: #000000">
+                <div class="d-flex justify-content-between btn align-items-center" href="{{route('subscription')}}" style="--bs-btn-hover-border-color: #000000">
                     <div>
                         <i class="bi bi-gem" style="color: #6f42c1"></i> Manage your plan
                     </div>
