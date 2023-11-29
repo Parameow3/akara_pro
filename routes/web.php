@@ -25,6 +25,13 @@ Route::get('/premium/subscription', function () {
     return view('subscription');
 })->name('subscription');
 
+Route::post('/session', 'App\Http\Controllers\StripeController@session')->name('session');
+
+Route::get('/premium/subscription/success', function () {
+    return view('success');
+})->name('success');
+
+
 Route::get('/navigate', function () {
     // Logic to determine where to navigate
     // For simplicity, assuming a random navigation
