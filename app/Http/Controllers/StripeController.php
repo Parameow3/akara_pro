@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plan;
 use Illuminate\Http\Request;
 use Stripe\Exception\ApiErrorException;
 
@@ -14,10 +15,13 @@ class StripeController extends Controller
     {
         \Stripe\Stripe::setApiKey(config('stripe.sk'));
 
+        $plan = Plan::find($request->plan);
+
         $productname = $request->get('planname');
-        $totalprice = $request->get('total');
-        $two0 = "99";
-        $total = "$totalprice$two0";
+        $total = $request->get('total');
+
+        $subscription = $request->user()->newSubscription($request->plan, $plan->stripe_plan)
+            ->create($request->token);
 
         $session = \Stripe\Checkout\Session::create([
             'line_items'  => [
@@ -37,6 +41,8 @@ class StripeController extends Controller
             'success_url' => route('success'),
             'cancel_url'  => route('subscription'),
         ]);
+
+
 
         return redirect()->away($session->url);
     }

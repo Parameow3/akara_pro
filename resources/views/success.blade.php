@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
     <body class="container-fluid mx-0 px-xl-0 px-0 bg-gray-100">
     <div class="row px-0 mx-2 mt-3 px-xl-5 mt-xl-5 mx-xl-5 justify-content-center">
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="row p-5 mx-0" style="background-color: rgba(111,66,193,0.47)">
-                    <h2 class="my-5 fw-bolder">Akara Premium</h2>
+                    <h2 class="my-5 fw-bolder">{{ $plan->name }}</h2>
                 </div>
 
                 <div class="row mx-3 mt-3 align-items-center">
@@ -27,7 +27,7 @@
                 <div class="row p-1 mx-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <h3 class="">$1.99</h3>
+                            <h3 class="">${{ $plan->price }}</h3>
                             <p>per month</p>
                         </div>
 
