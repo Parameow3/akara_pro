@@ -48,13 +48,21 @@
                                         <div class="panel-body bio-graph-info">
                                             <p style="color: #6f42c1">Your Plan</p>
                                             <div class="row">
-                                                <h1>Akara Free</h1>
+                                                <h1>{{$plan_name}}</h1>
                                             </div>
                                             <div class="row px-3 px-xl-5 mt-5">
+
                                                 <a href="{{route('subscription')}}" class="btn rounded-5 fw-bold"
                                                    style="--bs-btn-border-color: #6f42c1; --bs-btn-hover-bg: #6f42c1; --bs-btn-hover-color: #ffffff; --bs-btn-color: #6f42c1"><i
-                                                        class="bi bi-gem"></i> Join <span
-                                                        class="fw-bolder">Premium</span></a>
+                                                        class="bi bi-gem"></i>
+                                                    @if($plan_name == "Akara Free")
+                                                        Join
+                                                    @else
+                                                        Manage
+                                                    @endif
+                                                    <span class="fw-bolder">
+                                Premium
+                            </span></a>
                                             </div>
                                         </div>
                                     </div>

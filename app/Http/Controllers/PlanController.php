@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subscription;
 use Illuminate\Http\Request;
 use App\Models\Plan;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,17 @@ class PlanController extends Controller
     {
         $plans = Plan::get();
 
-        return view("subscription", compact("plans"));
+        $plan_id = Subscription::where('user_id', Auth::user()->getAuthIdentifier())->first();
+        if ($plan_id == null){
+            $plan_name = "Akara Free";
+            $plan_price = 0.00;
+        }
+        else{
+            $plan_name = Plan::where('id',$plan_id->name)->value('name');
+            $plan_price = Plan::where('id',$plan_id->name)->value('price');
+        }
+
+        return view("subscription", compact("plans", "plan_name", "plan_price"));
     }
 
     public function show(Plan $plan, Request $request)

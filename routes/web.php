@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PlanController;
+use App\Models\Plan;
+use App\Models\Subscription;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,7 +36,13 @@ Route::middleware("auth")->group(function () {
 });
 
 Route::get('/user/profile', function () {
-    return view('profile');
+    $plan_id = Subscription::where('user_id', Auth::user()->getAuthIdentifier())->first();
+    if ($plan_id == null)
+        $plan_name = "Akara Free";
+    else{
+        $plan_name = Plan::where('id',$plan_id->name)->value('name');
+    }
+    return view('profile', compact('plan_name'));
 })->name('profile');
 
 //Route::get('/premium/subscription', function () {
