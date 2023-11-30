@@ -5,7 +5,7 @@
     <div class="col-md-3">
         <div class="card p-3">
             <div class="user-heading round">
-                <img src="{{asset('founder.JPG')}}" style="height: 252px;object-fit: cover;" class="w-100 rounded-3" alt="">
+                <img src="{{asset('eno.webp')}}" style="height: 252px;object-fit: cover;" class="w-100 rounded-3" alt="">
                 <h3 class="mt-2">{{Auth::user()->name}}</h3>
                 <p>{{Auth::user()->email}}</p>
             </div>
