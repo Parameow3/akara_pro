@@ -23,12 +23,10 @@
                             </div>
                         </div>
 
-                        <div class="row m-4">
-                            <div class="col-xl-4 col-lg-4">
-                                <div class="form-group">
-                                    <label for="">Card details</label>
-                                    <div class="mt-3" id="card-element"></div>
-                                </div>
+                        <div class="row w-100 m-4">
+                            <div class="form-group">
+                                <label for="">Card details</label>
+                                <div class="mt-3 me-5 pe-5" id="card-element"></div>
                             </div>
                         </div>
 
